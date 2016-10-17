@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<suite name="Suite1">
+
+  <listeners>
+      <listener class-name="com.xbwq.Listener.ScreenShotListener"/>
+      <listener class-name="com.xbwq.Listener.RetryListener"/>
+      <listener class-name="com.xbwq.Listener.LogListener"/>
+  </listeners>
+    
+  
+  <test name="xbwqTestReport">
+    	  <!-- <parameter name="type"	value="洽谈场所" /> -->
+    <classes>
+      <class name="com.xbwq.TestCase.PhotoReport" />
+      <class name="com.xbwq.TestCase.OrderReport"/>
+    </classes>
+    
+  </test>
+</suite>

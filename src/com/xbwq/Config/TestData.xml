@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data>
+<!--     <photoReportCaoGao id="001">
+        <type>固定测试1</type>
+        <shuoming>这是一条说明111</shuoming>
+    </photoReportCaoGao>
+    
+    
+    <photoReportCaoGao id="002">
+        <type>洽谈场所</type>
+        <shuoming>这是一条说明222</shuoming>
+    </photoReportCaoGao> -->
+    
+	<addPhotoReport>
+	    <type>无</type>
+        <shuoming>这是一条说明333</shuoming>
+	</addPhotoReport>
+
+</data>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite1]">
+  <listeners>
+    <listener class-name="com.xbwq.Listener.ScreenShotListener"/>
+    <listener class-name="com.xbwq.Listener.RetryListener"/>
+    <listener class-name="com.xbwq.Listener.LogListener"/>
+  </listeners>
+  <test name="xbwqTestReport(failed)">
+    <classes>
+      <class name="com.xbwq.TestCase.OrderReport">
+        <methods>
+          <include name="beforeSuite"/>
+          <include name="beforeClass"/>
+          <include name="afterClass"/>
+          <include name="addOrderReport"/>
+          <include name="afterSuite"/>
+        </methods>
+      </class> <!-- com.xbwq.TestCase.OrderReport -->
+      <class name="com.xbwq.TestCase.PhotoReport">
+        <methods>
+          <include name="addPhotoReport" invocation-numbers="0 0"/>
+          <include name="photoReportCaoGao"/>
+          <include name="beforeClass"/>
+          <include name="afterClass"/>
+        </methods>
+      </class> <!-- com.xbwq.TestCase.PhotoReport -->
+    </classes>
+  </test> <!-- xbwqTestReport(failed) -->
+</suite> <!-- Failed suite [Suite1] -->

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application>
+    <page name="拍照上传页面">
+        <Element eleName="添加" 
+            	 id="com.xbcx.waiqing:id/tvAdd" 
+            	 xpath="//android.widget.TextView[contains(@text,'添加')]" 
+            	 ifBaseElement="true"></Element>
+        
+        <Element eleName="第一条数据"
+            	 xpath="//android.widget.ListView/android.widget.RelativeLayout[1]"
+            	 ifBaseElement="false"></Element>
+        
+        <Element eleName="筛选"
+            	 id=""
+            	 xpath="//android.widget.TextView[contains(@text,'筛选')]"
+            	 ifBaseElement="true"></Element>
+    </page>
+    
+    
+    <page name="添加拍照上传">
+        <Element eleName="类型"
+            	 id="com.xbcx.waiqing:id/viewBg"
+            	 xpath="android.widget.TextView[contains(@text, '类型')]"
+            	 ifBaseElement="true"></Element>
+    </page>
+</application>
+    
