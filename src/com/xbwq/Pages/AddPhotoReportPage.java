@@ -42,9 +42,9 @@ public class AddPhotoReportPage extends BasePage{
 	public void setPhoto(){
 		log.info("…œ¥´1’≈’’∆¨");
 		driver.findElement(takePhoto).click();
-		driver.findElementById("com.meizu.media.camera:id/shutter_btn").click();
+		driver.findElementById("com.android.camera2:id/shutter_button").click();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		driver.findElementById("com.meizu.media.camera:id/btn_done").click();
+		driver.findElementById("com.android.camera2:id/done_button").click();
 
 	}
 	

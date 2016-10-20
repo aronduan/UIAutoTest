@@ -13,7 +13,7 @@
     	  <!-- <parameter name="type"	value="洽谈场所" /> -->
     <classes>
       <class name="com.xbwq.TestCase.PhotoReport" />
-      <class name="com.xbwq.TestCase.OrderReport"/>
+      <!-- <class name="com.xbwq.TestCase.OrderReport"/> -->
     </classes>
     
   </test>
