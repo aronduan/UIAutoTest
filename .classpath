@@ -2,11 +2,11 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7"/>
-	<classpathentry exported="true" kind="lib" path="D:/Documents/Downloads/jar包/java-client-2.2.0.jar"/>
-	<classpathentry exported="true" kind="lib" path="D:/Documents/Downloads/jar包/selenium-java-2.43.1.jar"/>
-	<classpathentry exported="true" kind="lib" path="D:/Documents/Downloads/jar包/selenium-server-standalone-2.41.0.jar"/>
-	<classpathentry exported="true" kind="con" path="org.testng.TESTNG_CONTAINER"/>
-	<classpathentry exported="true" kind="lib" path="D:/Documents/Downloads/dom4j-1.6.1/dom4j-1.6.1.jar"/>
-	<classpathentry exported="true" kind="lib" path="D:/Documents/Downloads/log4j-1.2.17.jar"/>
+	<classpathentry kind="lib" path="D:/UIAutoTest所需导入的jar包/dom4j-1.6.1.jar"/>
+	<classpathentry kind="lib" path="D:/UIAutoTest所需导入的jar包/java-client-2.2.0.jar"/>
+	<classpathentry kind="lib" path="D:/UIAutoTest所需导入的jar包/log4j-1.2.17.jar"/>
+	<classpathentry kind="lib" path="D:/UIAutoTest所需导入的jar包/selenium-java-2.43.1.jar"/>
+	<classpathentry kind="lib" path="D:/UIAutoTest所需导入的jar包/selenium-server-standalone-2.41.0.jar"/>
+	<classpathentry kind="lib" path="D:/UIAutoTest所需导入的jar包/testng.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
