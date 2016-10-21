@@ -147,11 +147,11 @@
                   </a> <!-- photoReportCaoGao -->
                   <span class="method-name">photoReportCaoGao</span>
                   <div class="stack-trace">org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 10.21 seconds
+Command duration or timeout: 10.11 seconds
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;2.43.1&apos;, revision: &apos;5163bce&apos;, time: &apos;2014-09-10 16:27:58&apos;
 System info: host: &apos;PC201601111454&apos;, ip: &apos;192.168.70.239&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_13&apos;
-Session ID: 7ec88e2c-2c36-4e61-a9ef-e87fa288a6cb
+Session ID: 1fc749f4-2a39-4c33-9561-c0e1de84cbda
 Driver info: io.appium.java_client.android.AndroidDriver
 Capabilities [{platform=LINUX, javascriptEnabled=true, appActivity=com.xbcx.waiqing.activity.StartActivity, browserName=, networkConnectionEnabled=true, desired={platformVersion=4.3, deviceName=android, platformName=Android, appActivity=com.xbcx.waiqing.activity.StartActivity, browserName=, unicodeKeyboard=true, resetKeyboard=true, appPackage=com.xbcx.waiqing}, locationContextEnabled=false, appPackage=com.xbcx.waiqing, platformVersion=5.1.1, databaseEnabled=false, platformName=Android, deviceName=9STWGYKN99999999, webStorageEnabled=false, unicodeKeyboard=true, resetKeyboard=true, warnings={}, takesScreenshot=true}]
 	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
@@ -159,8 +159,8 @@ Capabilities [{platform=LINUX, javascriptEnabled=true, appActivity=com.xbcx.waiq
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
 	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:180)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:393)
-	at com.xbwq.Pages.AddPhotoReportPage.setPhoto(Unknown Source)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByName(RemoteWebDriver.java:425)
+	at com.xbwq.Pages.BasePage.clickModule(Unknown Source)
 	at com.xbwq.TestCase.PhotoReport.photoReportCaoGao(Unknown Source)
 ... Removed 27 stack frames
 </div> <!-- stack-trace -->
@@ -171,20 +171,21 @@ Capabilities [{platform=LINUX, javascriptEnabled=true, appActivity=com.xbcx.waiq
                   <a name="photoReportCaoGao">
                   </a> <!-- photoReportCaoGao -->
                   <span class="method-name">photoReportCaoGao</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 10.56 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+                  <div class="stack-trace">org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 32 milliseconds
 Build info: version: &apos;2.43.1&apos;, revision: &apos;5163bce&apos;, time: &apos;2014-09-10 16:27:58&apos;
 System info: host: &apos;PC201601111454&apos;, ip: &apos;192.168.70.239&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_13&apos;
-Session ID: 7ec88e2c-2c36-4e61-a9ef-e87fa288a6cb
+Session ID: 1fc749f4-2a39-4c33-9561-c0e1de84cbda
 Driver info: io.appium.java_client.android.AndroidDriver
 Capabilities [{platform=LINUX, javascriptEnabled=true, appActivity=com.xbcx.waiqing.activity.StartActivity, browserName=, networkConnectionEnabled=true, desired={platformVersion=4.3, deviceName=android, platformName=Android, appActivity=com.xbcx.waiqing.activity.StartActivity, browserName=, unicodeKeyboard=true, resetKeyboard=true, appPackage=com.xbcx.waiqing}, locationContextEnabled=false, appPackage=com.xbcx.waiqing, platformVersion=5.1.1, databaseEnabled=false, platformName=Android, deviceName=9STWGYKN99999999, webStorageEnabled=false, unicodeKeyboard=true, resetKeyboard=true, warnings={}, takesScreenshot=true}]
 	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
 	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
 	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:180)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByName(RemoteWebDriver.java:425)
+	at io.appium.java_client.AppiumDriver.performTouchAction(AppiumDriver.java:293)
+	at io.appium.java_client.TouchAction.perform(TouchAction.java:301)
+	at io.appium.java_client.AppiumDriver.swipe(AppiumDriver.java:348)
+	at com.xbwq.Pages.BasePage.swipeToUp(Unknown Source)
 	at com.xbwq.Pages.BasePage.clickModule(Unknown Source)
 	at com.xbwq.TestCase.PhotoReport.photoReportCaoGao(Unknown Source)
 ... Removed 27 stack frames
@@ -269,11 +270,11 @@ data.addRows(3);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'photoReportCaoGao')
 data.setCell(0, 2, 'com.xbwq.TestCase.PhotoReport')
-data.setCell(0, 3, 42228);
+data.setCell(0, 3, 12519);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'photoReportCaoGao')
 data.setCell(1, 2, 'com.xbwq.TestCase.PhotoReport')
-data.setCell(1, 3, 13346);
+data.setCell(1, 3, 2327);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'addPhotoReport')
 data.setCell(2, 2, 'com.xbwq.TestCase.PhotoReport')
@@ -282,7 +283,7 @@ window.suiteTableData['Suite1']= { tableData: data, tableDiv: 'times-div-Suite1'
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 55 seconds</span>
+              <span class="suite-total-time">Total running time: 14 seconds</span>
               <div id="times-div-Suite1">
               </div> <!-- times-div-Suite1 -->
             </div> <!-- times-div -->
@@ -315,27 +316,27 @@ return data;
               </div> <!-- configuration-suite before -->
               <div class="configuration-class before">
                 <span class="method-name">beforeClass</span>
-                <span class="method-start">16035 ms</span>
+                <span class="method-start">16053 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">photoReportCaoGao</span>
-                <span class="method-start">23736 ms</span>
+                <span class="method-start">22902 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">photoReportCaoGao</span>
-                <span class="method-start">69020 ms</span>
+                <span class="method-start">26213 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">afterClass</span>
-                <span class="method-start">85211 ms</span>
+                <span class="method-start">40046 ms</span>
               </div> <!-- configuration-class after -->
               <div class="configuration-suite after">
                 <span class="method-name">afterSuite</span>
-                <span class="method-start">86851 ms</span>
+                <span class="method-start">41622 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

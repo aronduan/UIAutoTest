@@ -2,38 +2,36 @@
 <testng-results skipped="1" failed="2" total="3" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite1" duration-ms="70770" started-at="2016-10-20T10:00:35Z" finished-at="2016-10-20T10:01:45Z">
+  <suite name="Suite1" duration-ms="25522" started-at="2016-10-20T10:18:07Z" finished-at="2016-10-20T10:18:33Z">
     <groups>
     </groups>
-    <test name="xbwqTestReport" duration-ms="70770" started-at="2016-10-20T10:00:35Z" finished-at="2016-10-20T10:01:45Z">
+    <test name="xbwqTestReport" duration-ms="25522" started-at="2016-10-20T10:18:07Z" finished-at="2016-10-20T10:18:33Z">
       <class name="com.xbwq.TestCase.PhotoReport">
-        <test-method status="PASS" signature="beforeSuite()[pri:0, instance:com.xbwq.TestCase.PhotoReport@3d7b218b]" name="beforeSuite" is-config="true" duration-ms="16035" started-at="2016-10-20T18:00:19Z" finished-at="2016-10-20T18:00:35Z">
+        <test-method status="PASS" signature="beforeSuite()[pri:0, instance:com.xbwq.TestCase.PhotoReport@5ed74c35]" name="beforeSuite" is-config="true" duration-ms="16053" started-at="2016-10-20T18:17:51Z" finished-at="2016-10-20T18:18:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeSuite -->
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.xbwq.TestCase.PhotoReport@3d7b218b]" name="beforeClass" is-config="true" duration-ms="7701" started-at="2016-10-20T18:00:35Z" finished-at="2016-10-20T18:00:42Z">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.xbwq.TestCase.PhotoReport@5ed74c35]" name="beforeClass" is-config="true" duration-ms="6849" started-at="2016-10-20T18:18:07Z" finished-at="2016-10-20T18:18:14Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="FAIL" signature="photoReportCaoGao()[pri:0, instance:com.xbwq.TestCase.PhotoReport@3d7b218b]" name="photoReportCaoGao" duration-ms="42228" started-at="2016-10-20T18:00:42Z" finished-at="2016-10-20T18:01:25Z">
-          <exception class="org.openqa.selenium.NoSuchElementException">
+        <test-method status="FAIL" signature="photoReportCaoGao()[pri:0, instance:com.xbwq.TestCase.PhotoReport@5ed74c35]" name="photoReportCaoGao" duration-ms="2327" started-at="2016-10-20T18:18:14Z" finished-at="2016-10-20T18:18:17Z">
+          <exception class="org.openqa.selenium.WebDriverException">
             <message>
-              <![CDATA[An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 10.21 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+              <![CDATA[An unknown server-side error occurred while processing the command. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 32 milliseconds
 Build info: version: '2.43.1', revision: '5163bce', time: '2014-09-10 16:27:58'
 System info: host: 'PC201601111454', ip: '192.168.70.239', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.7.0_13'
-Session ID: 7ec88e2c-2c36-4e61-a9ef-e87fa288a6cb
+Session ID: 1fc749f4-2a39-4c33-9561-c0e1de84cbda
 Driver info: io.appium.java_client.android.AndroidDriver
 Capabilities [{platform=LINUX, javascriptEnabled=true, appActivity=com.xbcx.waiqing.activity.StartActivity, browserName=, networkConnectionEnabled=true, desired={platformVersion=4.3, deviceName=android, platformName=Android, appActivity=com.xbcx.waiqing.activity.StartActivity, browserName=, unicodeKeyboard=true, resetKeyboard=true, appPackage=com.xbcx.waiqing}, locationContextEnabled=false, appPackage=com.xbcx.waiqing, platformVersion=5.1.1, databaseEnabled=false, platformName=Android, deviceName=9STWGYKN99999999, webStorageEnabled=false, unicodeKeyboard=true, resetKeyboard=true, warnings={}, takesScreenshot=true}]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 10.21 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+              <![CDATA[org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 32 milliseconds
 Build info: version: '2.43.1', revision: '5163bce', time: '2014-09-10 16:27:58'
 System info: host: 'PC201601111454', ip: '192.168.70.239', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.7.0_13'
-Session ID: 7ec88e2c-2c36-4e61-a9ef-e87fa288a6cb
+Session ID: 1fc749f4-2a39-4c33-9561-c0e1de84cbda
 Driver info: io.appium.java_client.android.AndroidDriver
 Capabilities [{platform=LINUX, javascriptEnabled=true, appActivity=com.xbcx.waiqing.activity.StartActivity, browserName=, networkConnectionEnabled=true, desired={platformVersion=4.3, deviceName=android, platformName=Android, appActivity=com.xbcx.waiqing.activity.StartActivity, browserName=, unicodeKeyboard=true, resetKeyboard=true, appPackage=com.xbcx.waiqing}, locationContextEnabled=false, appPackage=com.xbcx.waiqing, platformVersion=5.1.1, databaseEnabled=false, platformName=Android, deviceName=9STWGYKN99999999, webStorageEnabled=false, unicodeKeyboard=true, resetKeyboard=true, warnings={}, takesScreenshot=true}]
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
@@ -44,9 +42,11 @@ Capabilities [{platform=LINUX, javascriptEnabled=true, appActivity=com.xbcx.waiq
 	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
 	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:180)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:393)
-	at com.xbwq.Pages.AddPhotoReportPage.setPhoto(Unknown Source)
+	at io.appium.java_client.AppiumDriver.performTouchAction(AppiumDriver.java:293)
+	at io.appium.java_client.TouchAction.perform(TouchAction.java:301)
+	at io.appium.java_client.AppiumDriver.swipe(AppiumDriver.java:348)
+	at com.xbwq.Pages.BasePage.swipeToUp(Unknown Source)
+	at com.xbwq.Pages.BasePage.clickModule(Unknown Source)
 	at com.xbwq.TestCase.PhotoReport.photoReportCaoGao(Unknown Source)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
@@ -73,29 +73,29 @@ Capabilities [{platform=LINUX, javascriptEnabled=true, appActivity=com.xbcx.waiq
 	at org.testng.TestNG.main(TestNG.java:1333)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- photoReportCaoGao -->
-        <test-method status="FAIL" signature="photoReportCaoGao()[pri:0, instance:com.xbwq.TestCase.PhotoReport@3d7b218b]" name="photoReportCaoGao" duration-ms="13346" started-at="2016-10-20T18:01:28Z" finished-at="2016-10-20T18:01:41Z">
+        <test-method status="FAIL" signature="photoReportCaoGao()[pri:0, instance:com.xbwq.TestCase.PhotoReport@5ed74c35]" name="photoReportCaoGao" duration-ms="12519" started-at="2016-10-20T18:18:18Z" finished-at="2016-10-20T18:18:30Z">
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
               <![CDATA[An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 10.56 seconds
+Command duration or timeout: 10.11 seconds
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '2.43.1', revision: '5163bce', time: '2014-09-10 16:27:58'
 System info: host: 'PC201601111454', ip: '192.168.70.239', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.7.0_13'
-Session ID: 7ec88e2c-2c36-4e61-a9ef-e87fa288a6cb
+Session ID: 1fc749f4-2a39-4c33-9561-c0e1de84cbda
 Driver info: io.appium.java_client.android.AndroidDriver
 Capabilities [{platform=LINUX, javascriptEnabled=true, appActivity=com.xbcx.waiqing.activity.StartActivity, browserName=, networkConnectionEnabled=true, desired={platformVersion=4.3, deviceName=android, platformName=Android, appActivity=com.xbcx.waiqing.activity.StartActivity, browserName=, unicodeKeyboard=true, resetKeyboard=true, appPackage=com.xbcx.waiqing}, locationContextEnabled=false, appPackage=com.xbcx.waiqing, platformVersion=5.1.1, databaseEnabled=false, platformName=Android, deviceName=9STWGYKN99999999, webStorageEnabled=false, unicodeKeyboard=true, resetKeyboard=true, warnings={}, takesScreenshot=true}]]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 10.56 seconds
+Command duration or timeout: 10.11 seconds
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '2.43.1', revision: '5163bce', time: '2014-09-10 16:27:58'
 System info: host: 'PC201601111454', ip: '192.168.70.239', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.7.0_13'
-Session ID: 7ec88e2c-2c36-4e61-a9ef-e87fa288a6cb
+Session ID: 1fc749f4-2a39-4c33-9561-c0e1de84cbda
 Driver info: io.appium.java_client.android.AndroidDriver
 Capabilities [{platform=LINUX, javascriptEnabled=true, appActivity=com.xbcx.waiqing.activity.StartActivity, browserName=, networkConnectionEnabled=true, desired={platformVersion=4.3, deviceName=android, platformName=Android, appActivity=com.xbcx.waiqing.activity.StartActivity, browserName=, unicodeKeyboard=true, resetKeyboard=true, appPackage=com.xbcx.waiqing}, locationContextEnabled=false, appPackage=com.xbcx.waiqing, platformVersion=5.1.1, databaseEnabled=false, platformName=Android, deviceName=9STWGYKN99999999, webStorageEnabled=false, unicodeKeyboard=true, resetKeyboard=true, warnings={}, takesScreenshot=true}]
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
@@ -139,15 +139,15 @@ Capabilities [{platform=LINUX, javascriptEnabled=true, appActivity=com.xbcx.waiq
           <reporter-output>
           </reporter-output>
         </test-method> <!-- photoReportCaoGao -->
-        <test-method status="SKIP" signature="addPhotoReport()[pri:0, instance:com.xbwq.TestCase.PhotoReport@3d7b218b]" name="addPhotoReport" duration-ms="0" started-at="2016-10-20T18:01:44Z" depends-on-methods="com.xbwq.TestCase.PhotoReport.photoReportCaoGao" finished-at="2016-10-20T18:01:44Z">
+        <test-method status="SKIP" signature="addPhotoReport()[pri:0, instance:com.xbwq.TestCase.PhotoReport@5ed74c35]" name="addPhotoReport" duration-ms="0" started-at="2016-10-20T18:18:31Z" depends-on-methods="com.xbwq.TestCase.PhotoReport.photoReportCaoGao" finished-at="2016-10-20T18:18:31Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addPhotoReport -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.xbwq.TestCase.PhotoReport@3d7b218b]" name="afterClass" is-config="true" duration-ms="1594" started-at="2016-10-20T18:01:44Z" finished-at="2016-10-20T18:01:45Z">
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.xbwq.TestCase.PhotoReport@5ed74c35]" name="afterClass" is-config="true" duration-ms="1529" started-at="2016-10-20T18:18:31Z" finished-at="2016-10-20T18:18:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-        <test-method status="PASS" signature="afterSuite()[pri:0, instance:com.xbwq.TestCase.PhotoReport@3d7b218b]" name="afterSuite" is-config="true" duration-ms="16" started-at="2016-10-20T18:01:45Z" finished-at="2016-10-20T18:01:45Z">
+        <test-method status="PASS" signature="afterSuite()[pri:0, instance:com.xbwq.TestCase.PhotoReport@5ed74c35]" name="afterSuite" is-config="true" duration-ms="0" started-at="2016-10-20T18:18:33Z" finished-at="2016-10-20T18:18:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterSuite -->

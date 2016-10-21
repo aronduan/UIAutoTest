@@ -15,6 +15,13 @@
 	
 	<target name="compile" depends ="clean">
 		<mkdir dir ="${basedir}/build/classes"/>
+		<!--复制log4j的配置文件  -->
+		<copy todir="${basedir}/build/classes">  
+	        <fileset dir="${basedir}/src">  
+	            <include name="**/*.properties"/>      
+	        </fileset>  
+    	</copy> 
+		
 		<javac srcdir ="${basedir}/src" destdir ="${basedir}/build/classes"  includeantruntime="on">
 		    <classpath refid="run.classpath"/>
 		</javac>
