@@ -37,6 +37,7 @@ public class OrderReport extends BaseTest{
 	@Test
 	public void addOrderReport(){
 		log.info("testcase:添加订单");
+		page.swipeToLeft(500);
 		page.clickModule("订单上报");
 		page.clickAddOrder();
 		page.setCustomer();
@@ -46,7 +47,7 @@ public class OrderReport extends BaseTest{
 		page.submit();
 		page.waitForText(10, "订单上报");
 		page.takeScreenShot("提交订单");
-		page.backToHomePage();
+		page.backToHomePage2();
 	}
 	
 	@Test(dependsOnMethods={"addOrderReport"})

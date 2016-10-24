@@ -1,23 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Suite1]">
-  <listeners>
-    <listener class-name="com.xbwq.Listener.ScreenShotListener"/>
-    <listener class-name="com.xbwq.Listener.RetryListener"/>
-    <listener class-name="com.xbwq.Listener.LogListener"/>
-  </listeners>
-  <test name="xbwqTestReport(failed)">
+<suite name="Failed suite [Default suite]">
+  <test name="Default test(failed)">
     <classes>
-      <class name="com.xbwq.TestCase.PhotoReport">
+      <class name="com.xbwq.TestCase.SalesReport">
         <methods>
           <include name="beforeSuite"/>
-          <include name="addPhotoReport"/>
-          <include name="photoReportCaoGao"/>
-          <include name="beforeClass"/>
           <include name="afterClass"/>
+          <include name="beforeClass"/>
+          <include name="addSalesReport"/>
           <include name="afterSuite"/>
         </methods>
-      </class> <!-- com.xbwq.TestCase.PhotoReport -->
+      </class> <!-- com.xbwq.TestCase.SalesReport -->
     </classes>
-  </test> <!-- xbwqTestReport(failed) -->
-</suite> <!-- Failed suite [Suite1] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

@@ -40,9 +40,12 @@ public class BasePage {
 	By customer = By.name("客户");
 	By caogao = By.name("存为草稿");
 	By xiugaiButton = By.name("修改");
+	By deleteButton = By.name("删除");
 	
 	
 	@FindBy(name="提交") WebElement submitButton;
+	@FindBy(name="添加商品") WebElement addGoogsButton;
+	@FindBy(name="删除商品") WebElement deleteGoogsButton;
 
 	public BasePage(AndroidDriver driver){
 		this.driver = driver;
@@ -50,14 +53,39 @@ public class BasePage {
 
 	
 	public void clickModule(String moduleName){
-		if(isElementExist(By.name(moduleName), 2)){
-			driver.findElementByName(moduleName).click();
-		}else{
-			swipeToUp(500);
-			driver.findElementByName(moduleName).click();
+		long startTime = System.currentTimeMillis();
+		setElementLocateTimeOut(5);
+		while(!isElementExist(By.name(moduleName), 2)){
+			swipeToUp(1500);
+			if(System.currentTimeMillis()-startTime >= 20*1000){
+				break;
+			}
+		}
+		driver.findElement(By.name(moduleName)).click();
+		setElementLocateTimeOut(10);
+	}
+	
+	
+	public void addGoods(String name,int num){
+		addGoogsButton.click();
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		driver.findElementByXPath("//android.view.View/android.widget.RelativeLayout"
+				+ "/android.widget.ImageView[3]").click();
+		driver.findElement(By.id("com.xbcx.waiqing:id/etSearch")).sendKeys(name);
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		WebElement element = driver.findElementById("com.xbcx.waiqing:id/viewForClick");
+		click(element, "选择商品");
+		driver.findElementById("com.xbcx.waiqing:id/btnOK").click();
+		for(int i=0; i<num; i++){
+			driver.findElementById("com.xbcx.waiqing:id/btnPlus").click();
 		}
 	}
 	
+	public void deleteGoods(){
+		deleteGoogsButton.click();
+		driver.findElement(By.id("com.xbcx.waiqing:id/ivDelete")).click();
+		driver.findElement(By.name("是")).click();;
+	}
 
 	public void clickAddButton(){
 		driver.findElement(addButton).click();
@@ -74,6 +102,17 @@ public class BasePage {
 		driver.findElementByName("确定").click();
 	}
 	
+	public void takeCMPhoto(){
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		driver.findElementById("com.android.camera2:id/shutter_button").click();
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		driver.findElementById("com.android.camera2:id/done_button").click();
+	}
+	
 	/**
 	 * 点击提交按钮，会检查是否可点击
 	 */
@@ -85,6 +124,12 @@ public class BasePage {
 	
 	public void clickXiugai(){
 		driver.findElement(xiugaiButton).click();
+	}
+	
+	public void deleteCaoGao(){
+		driver.findElement(deleteButton).click();
+		takeScreenShot("删除草稿");
+		driver.findElement(By.name("确定")).click();
 	}
 	
 	/*点击列表第一条数据*/
@@ -215,7 +260,7 @@ public class BasePage {
 	
 	public void backToHomePage(){
 		int times = 0;
-		while(!isElementExist(By.name("外勤工作"), 2)){
+		while(!waitForText(3, "工作台")){
 			if(times>=20){
 				log.info("尝试多次未能返回至首页，终止操作");
 				break;
@@ -229,6 +274,34 @@ public class BasePage {
 			times++;
 		}
 		log.info("back to home page");
+		try {
+			Thread.sleep(3000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public void backToHomePage2(){
+		int times = 0;
+		while(!waitForText(3, "外勤工作")){
+			if(times>=20){
+				log.info("尝试多次未能返回至首页，终止操作");
+				break;
+			}
+			driver.sendKeyEvent(AndroidKeyCode.BACK);
+			if(isElementExist(By.id("com.xbcx.waiqing:id/btnOK"),2)){
+				WebElement okButton = driver.findElement(By.id("com.xbcx.waiqing:id/btnOK"));
+				okButton.click();
+				driver.sendKeyEvent(AndroidKeyCode.BACK);
+			}
+			times++;
+		}
+		log.info("back to home page2");
+		try {
+			Thread.sleep(3000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
 	}
     
     /**

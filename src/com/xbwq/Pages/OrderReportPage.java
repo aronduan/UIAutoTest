@@ -16,12 +16,10 @@ public class OrderReportPage extends BasePage{
 	
 	private AndroidDriver driver;
 	private Logger log = MyLogger.log;
-	BasePage basePage = new BasePage(driver);
 	
 	
 	@FindBy(name="添加订单") WebElement addOrderButton;
 	@FindBy(id="com.xbcx.waiqing:id/tvRight") WebElement orderRecordButton;
-	@FindBy(name="添加商品") WebElement addGoogsButton;
 	@FindBy(name="绑品") WebElement bangping;
 	@FindBy(name="订单备注") WebElement dingdanbeizhu;
 	@FindBy(name="删除商品") WebElement deleteGoodsButton;
@@ -33,37 +31,23 @@ public class OrderReportPage extends BasePage{
 	}
 	
 	public void clickAddOrder(){
-		basePage.click(addOrderButton, "点击添加订单按钮");
+		click(addOrderButton, "点击添加订单按钮");
 	}
 	
 	public void clickOrderRecord(){
-		basePage.click(orderRecordButton, "从进货记录下单");
-	}
-	
-	public void addGoods(String name,int num){
-		addGoogsButton.click();
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		driver.findElementById("com.xbcx.waiqing:id/etSearch").sendKeys(name);
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		WebElement element = driver.findElementById("com.xbcx.waiqing:id/viewForClick");
-		basePage.click(element, "选择商品");
-		driver.findElementById("com.xbcx.waiqing:id/btnOK").click();
-		for(int i=0; i<num; i++){
-			driver.findElementById("com.xbcx.waiqing:id/btnPlus").click();
-		}
-		
+		click(orderRecordButton, "从进货记录下单");
 	}
 	
 	public void setBangPing(){
-		basePage.sendKeys(bangping, "填写绑品", "这是绑品");
+		sendKeys(bangping, "填写绑品", "这是绑品");
 	}
 	
 	public void setRemakes(){
-		basePage.sendKeys(dingdanbeizhu, "填写备注", "这是订单备注");
+		sendKeys(dingdanbeizhu, "填写备注", "这是订单备注");
 	}
 	
 	public void deleteGoods(){
-		basePage.click(deleteGoodsButton, "删除商品");
+		click(deleteGoodsButton, "删除商品");
 		driver.findElementById("com.xbcx.waiqing:id/ivDelete").click();
 		driver.findElementByName("是").click();
 	}

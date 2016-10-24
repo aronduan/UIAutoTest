@@ -14,10 +14,16 @@
           <include name="addPhotoReport"/>
           <include name="photoReportCaoGao"/>
           <include name="beforeClass"/>
-          <include name="afterClass"/>
-          <include name="afterSuite"/>
         </methods>
       </class> <!-- com.xbwq.TestCase.PhotoReport -->
+      <class name="com.xbwq.TestCase.DisplayCheck">
+        <methods>
+          <include name="deleteDisplayCheckCaoGao"/>
+          <include name="beforeClass"/>
+          <include name="addDisplayCheck"/>
+          <include name="displayCheckCaoGao"/>
+        </methods>
+      </class> <!-- com.xbwq.TestCase.DisplayCheck -->
     </classes>
   </test> <!-- xbwqTestReport(failed) -->
 </suite> <!-- Failed suite [Suite1] -->

@@ -13,9 +13,9 @@ import org.openqa.selenium.support.PageFactory;
 public class AddPhotoReportPage extends BasePage{
 	
 	private AndroidDriver driver;
-	BasePage basePage = new BasePage(driver);
 	
 //	By type = By.name("类型");
+	By addButton = By.name("添加拍照");
 	By takePhoto = By.id("com.xbcx.waiqing:id/ivPic");
 //	By shuoming = By.name("说明");
 //	By shaixuan = By.name("筛选");
@@ -29,23 +29,24 @@ public class AddPhotoReportPage extends BasePage{
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
-
+	
+	public void clickAddPhoto(){
+		driver.findElement(addButton).click();
+	}
+	
 	public void setType(String typeName){
-		basePage.click(type, "设置类型");
+		click(type, "设置类型");
 		driver.findElementByName(typeName).click();
 	}
 		
 	public void setShuoMing(String string){
-		basePage.sendKeys(shuoming, "填写说明", string);
+		sendKeys(shuoming, "填写说明", string);
 	}
 	
 	public void setPhoto(){
 		log.info("上传1张照片");
 		driver.findElement(takePhoto).click();
-		driver.findElementById("com.android.camera2:id/shutter_button").click();
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		driver.findElementById("com.android.camera2:id/done_button").click();
-
+		takeCMPhoto();
 	}
 	
 }

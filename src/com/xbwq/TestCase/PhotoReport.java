@@ -30,6 +30,12 @@ public class PhotoReport extends BaseTest{
 		driver = Driver.getDriver();
 		page = new AddPhotoReportPage(driver);
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		//如果启动app，就进行滑动操作，要休眠线程3秒
+		try {
+			Thread.sleep(3000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
 	}
 	
 	@AfterClass
@@ -42,8 +48,10 @@ public class PhotoReport extends BaseTest{
 	@Test
 	public void photoReportCaoGao(){
 		log.info("testcase:拍照上传草稿");
+		page.swipeToLeft(500);
 		page.clickModule("拍照上传");
-		page.clickAddButton();
+//		page.scrollToExact("拍照上传", "滑动");
+		page.clickAddPhoto();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		page.setType("无");
 		page.setCustomer();
@@ -51,7 +59,7 @@ public class PhotoReport extends BaseTest{
 		page.setPhoto();
 		page.saveAsCaogao();
 		page.takeScreenShot("新增草稿");
-		page.backToHomePage();
+		page.backToHomePage2();
 	}
 	
 	
@@ -61,13 +69,13 @@ public class PhotoReport extends BaseTest{
 		page.clickModule("拍照上传");
 		page.clickFirstData();
 		page.setType("洽谈场所");
-//		page.editTextClear(driver.findElementByName("说明"));
-		page.clear(driver.findElementByName("说明"), "清除文本");
+		page.editTextClear(driver.findElementByName("说明"));
+//		page.clear(driver.findElementByName("说明"), "清除文本");
 		page.setShuoMing("修改说明");
 		page.submit();
-		page.waitForText(10, "筛选");
+		page.waitForText(10, "老板");//临时代码，方便判断提交后回到列表界面
 		page.takeScreenShot("添加拍照上传");
-		page.backToHomePage();
+		page.backToHomePage2();
 		
 	}
 

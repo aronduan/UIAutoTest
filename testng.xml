@@ -9,11 +9,22 @@
   </listeners>
     
   
-  <test name="xbwqTestReport">
+  <test verbose="2" preserve-order="true" name="xbwqTestReport">
     	  <!-- <parameter name="type"	value="洽谈场所" /> -->
     <classes>
       <class name="com.xbwq.TestCase.PhotoReport" />
       <!-- <class name="com.xbwq.TestCase.OrderReport"/> -->
+      
+      <class name="com.xbwq.TestCase.DisplayCheck">
+          <methods>
+              <include name="deleteDisplayCheckCaoGao"/>
+              <include name="displayCheckCaoGao"/>
+              <include name="addDisplayCheck"/>
+          </methods>
+          
+      </class>
+      
+      
     </classes>
     
   </test>
