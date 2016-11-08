@@ -1,17 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Default suite]">
-  <test name="Default test(failed)">
+<suite name="Failed suite [Suite1]">
+  <listeners>
+    <listener class-name="com.xbwq.Listener.ScreenShotListener"/>
+    <listener class-name="com.xbwq.Listener.RetryListener"/>
+    <listener class-name="com.xbwq.Listener.LogListener"/>
+  </listeners>
+  <test name="xbwqTestReport(failed)">
     <classes>
-      <class name="com.xbwq.TestCase.SalesReport">
+      <class name="com.xbwq.TestCase.CompetingGoodsReport">
         <methods>
           <include name="beforeSuite"/>
-          <include name="afterClass"/>
           <include name="beforeClass"/>
-          <include name="addSalesReport"/>
-          <include name="afterSuite"/>
+          <include name="addCompetingGoodsReport"/>
+          <include name="competingGoodsReportCaoGao"/>
+          <include name="deleteCompetingGoodsReportCaoGao"/>
         </methods>
-      </class> <!-- com.xbwq.TestCase.SalesReport -->
+      </class> <!-- com.xbwq.TestCase.CompetingGoodsReport -->
+      <class name="com.xbwq.TestCase.Login">
+        <methods>
+          <include name="beforeClass"/>
+          <include name="loginTest"/>
+        </methods>
+      </class> <!-- com.xbwq.TestCase.Login -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- xbwqTestReport(failed) -->
+</suite> <!-- Failed suite [Suite1] -->

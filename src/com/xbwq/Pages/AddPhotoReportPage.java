@@ -1,5 +1,6 @@
 package com.xbwq.Pages;
 
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import io.appium.java_client.AppiumDriver;
@@ -43,10 +44,13 @@ public class AddPhotoReportPage extends BasePage{
 		sendKeys(shuoming, "填写说明", string);
 	}
 	
-	public void setPhoto(){
-		log.info("上传1张照片");
-		driver.findElement(takePhoto).click();
-		takeCMPhoto();
+	public void setPhoto(int num){
+		log.info("[拍摄"+num+"张照片]");
+		for(int i=0; i<num; i++){
+			List<WebElement> elements = driver.findElementsById("com.xbcx.waiqing:id/ivPic");
+			elements.get(i).click();
+			takeCMPhoto();
+		}
 	}
 	
 }

@@ -3,15 +3,15 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.xbwq.TestCase.SalesReport">
+      <class name="com.xbwq.TestCase.ManageReport">
         <methods>
           <include name="beforeSuite"/>
           <include name="afterClass"/>
-          <include name="beforeClass"/>
-          <include name="addSalesReport"/>
+          <include name="webViewTest"/>
           <include name="afterSuite"/>
+          <include name="beforeClass"/>
         </methods>
-      </class> <!-- com.xbwq.TestCase.SalesReport -->
+      </class> <!-- com.xbwq.TestCase.ManageReport -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

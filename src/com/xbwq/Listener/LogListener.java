@@ -11,6 +11,7 @@ public class LogListener extends TestListenerAdapter {
 	
 	@Override
 	public void onTestStart(ITestResult tr){
+		log.info("----------------------------------------");
 		log.info("Test Started....");
 	}
 	
@@ -20,7 +21,7 @@ public class LogListener extends TestListenerAdapter {
 		// This will print the class name in which the method is present
 		log.info(tr.getTestClass());
 
-		log.info("Test '" + tr.getName() + "' PASSED");
+		log.info("Testcase '" + tr.getName() + "' PASSED");
 
 		// This will print the priority of the method.
 		// If the priority is not defined it will print the default priority as
@@ -32,12 +33,12 @@ public class LogListener extends TestListenerAdapter {
 	@Override
 	public void onTestFailure(ITestResult tr) {
 
-		log.info("Test '" + tr.getName() + "' FAILED");
+		log.info("Testcase '" + tr.getName() + "' FAILED");
 //		log.info("Priority of this method is " + tr.getMethod().getPriority());
 	}
 
 	@Override
 	public void onTestSkipped(ITestResult tr) {
-		log.info("Test '" + tr.getName() + "' SKIPPED");
+		log.info("Testcase '" + tr.getName() + "' SKIPPED");
 	}
 }

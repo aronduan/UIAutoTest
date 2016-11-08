@@ -15,5 +15,17 @@
 	    <type>无</type>
         <shuoming>这是一条说明333</shuoming>
 	</addPhotoReport>
-
+	
+	
+	<loginTest>
+	    <company>zdhcs</company>
+	    <username>Aleader</username>
+	    <password>aaaaaa</password>
+	</loginTest>
+	
+	<loginTest>
+	    <company>zdhcs</company>
+	    <username>lb</username>
+	    <password>aaaaaa</password>
+	</loginTest>
 </data>

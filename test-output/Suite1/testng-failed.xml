@@ -8,22 +8,21 @@
   </listeners>
   <test name="xbwqTestReport(failed)">
     <classes>
-      <class name="com.xbwq.TestCase.PhotoReport">
+      <class name="com.xbwq.TestCase.CompetingGoodsReport">
         <methods>
           <include name="beforeSuite"/>
-          <include name="addPhotoReport"/>
-          <include name="photoReportCaoGao"/>
           <include name="beforeClass"/>
+          <include name="addCompetingGoodsReport"/>
+          <include name="competingGoodsReportCaoGao"/>
+          <include name="deleteCompetingGoodsReportCaoGao"/>
         </methods>
-      </class> <!-- com.xbwq.TestCase.PhotoReport -->
-      <class name="com.xbwq.TestCase.DisplayCheck">
+      </class> <!-- com.xbwq.TestCase.CompetingGoodsReport -->
+      <class name="com.xbwq.TestCase.Login">
         <methods>
-          <include name="deleteDisplayCheckCaoGao"/>
           <include name="beforeClass"/>
-          <include name="addDisplayCheck"/>
-          <include name="displayCheckCaoGao"/>
+          <include name="loginTest"/>
         </methods>
-      </class> <!-- com.xbwq.TestCase.DisplayCheck -->
+      </class> <!-- com.xbwq.TestCase.Login -->
     </classes>
   </test> <!-- xbwqTestReport(failed) -->
 </suite> <!-- Failed suite [Suite1] -->

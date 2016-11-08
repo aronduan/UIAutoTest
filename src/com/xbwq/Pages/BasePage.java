@@ -61,7 +61,8 @@ public class BasePage {
 				break;
 			}
 		}
-		driver.findElement(By.name(moduleName)).click();
+		WebElement element = driver.findElement(By.name(moduleName));
+		click(element, "点击"+"『"+moduleName+"』"+"模块");
 		setElementLocateTimeOut(10);
 	}
 	
@@ -78,6 +79,7 @@ public class BasePage {
 		driver.findElementById("com.xbcx.waiqing:id/btnOK").click();
 		for(int i=0; i<num; i++){
 			driver.findElementById("com.xbcx.waiqing:id/btnPlus").click();
+			log.info("[添加"+num+"个商品]");
 		}
 	}
 	
@@ -118,8 +120,6 @@ public class BasePage {
 	 */
 	public void submit(){
 		clickClickableElement(submitButton, 5, 1000, "点击提交按钮");
-//		waitForElementClickable(submitButton, 5, 1000);
-//		click(submitButton, "点击提交按钮");
 	}
 	
 	public void clickXiugai(){
@@ -146,7 +146,7 @@ public class BasePage {
 	 * @param logText  input log text
 	 */
 	public void click(final WebElement element, String logText){
-		log.info("["+logText+"，" + "点击 " + element.toString().substring(element.toString().indexOf("->")));
+		log.info("["+logText+"，" + "by " + element.toString().substring(element.toString().indexOf("->")));
 		element.click();
 	}
 	
@@ -156,7 +156,7 @@ public class BasePage {
 	 * @param logText
 	 */
 	public void clear(final WebElement element, String logText){
-		log.info("["+logText+"，"+"清空数据  "+element.toString().substring(element.toString().indexOf("->")));
+		log.info("["+logText+"，"+"by "+element.toString().substring(element.toString().indexOf("->")));
 		element.clear();
 	}
 	
@@ -169,19 +169,19 @@ public class BasePage {
      * @param charSequences sendKeys content, support for multiple strings.
      */
 	public void sendKeys(final WebElement element, String logText, CharSequence...charSequences){
-		log.info("["+logText+"，"+"输入字符 "+element.toString().substring(element.toString().indexOf("->")));
+		log.info("["+logText+"，"+"by "+element.toString().substring(element.toString().indexOf("->")));
 		element.sendKeys(charSequences);
 	}
 	
 	
 	public String getText(final WebElement element, String logText){
-		log.info("["+logText+"，"+"获取文本 "+element.toString().substring(element.toString().indexOf("->")));
+		log.info("["+logText+"，"+"by "+element.toString().substring(element.toString().indexOf("->")));
 		return element.getText();
 	}
 	
 	
 	public String getAttribute(final WebElement element, String attribute, String logText){
-		log.info("["+logText+"，"+"获取属性 "+element.toString().substring(element.toString().indexOf("->")));
+		log.info("["+logText+"，"+"by "+element.toString().substring(element.toString().indexOf("->")));
 		return element.getAttribute(attribute);
 	}
 	
@@ -317,7 +317,7 @@ public class BasePage {
     	boolean clickable = false;
     	driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		WebDriverWait wait = new WebDriverWait(driver, timeOutInSeconds, sleepInMillis);
-		clickable = wait.until(ExpectedConditions.elementToBeClickable(by)) != null;
+		clickable = (wait.until(ExpectedConditions.elementToBeClickable(by)) != null);
 		return clickable;
     }
 	
@@ -326,7 +326,7 @@ public class BasePage {
     	boolean clickable = false;
     	driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		WebDriverWait wait = new WebDriverWait(driver, timeOutInSeconds, sleepInMillis);
-		clickable = wait.until(ExpectedConditions.elementToBeClickable(element)) != null;
+		clickable = (wait.until(ExpectedConditions.elementToBeClickable(element)) != null);//检查有没有返回可点击的element
 		return clickable;
     }
     

@@ -56,7 +56,7 @@ public class PhotoReport extends BaseTest{
 		page.setType("无");
 		page.setCustomer();
 		page.setShuoMing("草稿说明");
-		page.setPhoto();
+		page.setPhoto(5);
 		page.saveAsCaogao();
 		page.takeScreenShot("新增草稿");
 		page.backToHomePage2();
