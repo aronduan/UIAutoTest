@@ -3,7 +3,6 @@ package com.xbwq.Listener;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Method;
 
-import org.eclipse.jdt.internal.compiler.ast.Annotation;
 import org.testng.IAnnotationTransformer;
 import org.testng.IRetryAnalyzer;
 import org.testng.annotations.ITestAnnotation;

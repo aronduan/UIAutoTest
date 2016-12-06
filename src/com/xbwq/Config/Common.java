@@ -15,9 +15,9 @@ import org.w3c.dom.NodeList;
 
 import io.appium.java_client.android.AndroidDriver;
 
-public class common {
+public class Common {
 	public AndroidDriver driver;
-	public common(AndroidDriver driver) throws MalformedURLException{
+	public Common(AndroidDriver driver) throws MalformedURLException{
 //		driver = Driver.getDriver();
 		this.driver = driver;
 	}

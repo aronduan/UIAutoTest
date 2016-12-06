@@ -19,59 +19,11 @@
     </content>
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="inheritedJdk" />
-    <orderEntry type="module-library" exported="">
-      <library name="dom4j-1.6.1.jar">
-        <CLASSES>
-          <root url="jar://D:/UIAutoTest所需导入的jar包/dom4j-1.6.1.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library name="java-client-2.2.0.jar">
-        <CLASSES>
-          <root url="jar://D:/UIAutoTest所需导入的jar包/java-client-2.2.0.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library name="log4j-1.2.17.jar">
-        <CLASSES>
-          <root url="jar://D:/UIAutoTest所需导入的jar包/log4j-1.2.17.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library name="selenium-java-2.43.1.jar">
-        <CLASSES>
-          <root url="jar://D:/UIAutoTest所需导入的jar包/selenium-java-2.43.1.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library name="selenium-server-standalone-2.41.0.jar">
-        <CLASSES>
-          <root url="jar://D:/UIAutoTest所需导入的jar包/selenium-server-standalone-2.41.0.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library name="testng.jar">
-        <CLASSES>
-          <root url="jar://D:/UIAutoTest所需导入的jar包/testng.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
+    <orderEntry type="library" exported="" name="testng" level="project" />
+    <orderEntry type="library" exported="" name="log4j-1.2.17" level="project" />
+    <orderEntry type="library" exported="" name="dom4j-1.6.1" level="project" />
+    <orderEntry type="library" exported="" name="selenium-java-2.53.0" level="project" />
+    <orderEntry type="library" exported="" scope="PROVIDED" name="selenium-server-standalone-2.44.0" level="project" />
+    <orderEntry type="library" name="java-client-2.2.0" level="project" />
   </component>
 </module>

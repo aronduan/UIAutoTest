@@ -76,7 +76,7 @@ public class PhotoReport extends BaseTest{
 		page.waitForText(10, "老板");//临时代码，方便判断提交后回到列表界面
 		page.takeScreenShot("添加拍照上传");
 		page.backToHomePage2();
-		
+
 	}
 
   }

@@ -49,31 +49,23 @@ public class CompetingGoodsReport extends BaseTest{
 		page.backToHomePage2();
 	}
 	
+
 	@Test
-	public void competingGoodsReportCaoGao(){
-		log.info("testcase:新增竞品上报草稿");
-		page.swipeToLeft(500);
+	public void addCompetingGoodsReport(){
+		log.info("testcase:新增竞品上报");
 		page.clickModule("竞品上报");
 		page.addCompetingGoods();
 		page.setCustomer();
 		page.setCompetingBrand("竞品品牌");
 		page.setNote("这是备注");
 		page.setPhoto();
-		page.saveAsCaogao();
-		page.takeScreenShot("竞品上报草稿");
-		page.backToHomePage2();
-	}
-	
-	@Test
-	public void addCompetingGoodsReport(){
-		log.info("testcase:新增竞品上报");
-		page.clickModule("竞品上报");
-		page.clickFirstData();
-		page.editTextClear(driver.findElementByName("竞品品牌"));
-		page.setCompetingBrand("修改竞品品牌");
 		page.submit();
 		page.waitForText(10, "老板");//临时代码，方便判断提交后回到列表界面
 		page.takeScreenShot("新增竞品上报");
+
+		page.clickFirstData();
+		page.editTextClear(driver.findElementByName("竞品品牌"));
+		page.setCompetingBrand("修改竞品品牌");
 		page.backToHomePage2();
 	}
 }

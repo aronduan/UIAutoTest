@@ -10,12 +10,11 @@ import org.testng.annotations.Test;
 
 import com.xbwq.Config.Driver;
 import com.xbwq.Config.MyLogger;
-import com.xbwq.Pages.DisplayCheckPage;
 import com.xbwq.Pages.InventoryReportPage;
 
 public class InventoryReport extends BaseTest{
 	
-	InventoryReportPage page = null;
+	private InventoryReportPage page = null;
 	Logger log = MyLogger.log;
 	
 	@BeforeClass

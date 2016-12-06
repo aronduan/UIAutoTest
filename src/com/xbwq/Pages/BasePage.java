@@ -165,7 +165,7 @@ public class BasePage {
      * override original method
      * 模拟输入,在原生方法执行时添加日志。
      * @param element       the element to be found.
-     * @param LogText       input log text.
+     * @param logText       input log text.
      * @param charSequences sendKeys content, support for multiple strings.
      */
 	public void sendKeys(final WebElement element, String logText, CharSequence...charSequences){
@@ -386,7 +386,7 @@ public class BasePage {
     
     /**
      * 在指定时间内判断指定的对象是否存在
-     * @param element
+     * @param by
      * @param timeOut
      * @return boolean
      */

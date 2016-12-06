@@ -26,6 +26,12 @@ public class OrderReport extends BaseTest{
 		driver = Driver.getDriver();
 		page = new OrderReportPage(driver);
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		//如果启动app，就进行滑动操作，要休眠线程4秒
+		try {
+			Thread.sleep(4000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
 	}
 	
 	@AfterClass
@@ -62,6 +68,6 @@ public class OrderReport extends BaseTest{
 		page.submit();
 		page.waitForText(10, "订单上报");
 		page.takeScreenShot("修改订单");
-		page.backToHomePage();
+		page.backToHomePage2();
 	}
 }
