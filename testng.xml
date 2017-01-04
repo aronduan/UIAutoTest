@@ -3,9 +3,8 @@
 <suite name="Suite1">
 
   <listeners>
-      <listener class-name="com.xbwq.Listener.ScreenShotListener"/>
+      <listener class-name="com.xbwq.Listener.TestNGListener"/>
       <listener class-name="com.xbwq.Listener.RetryListener"/>
-      <listener class-name="com.xbwq.Listener.LogListener"/>
   </listeners>
     
   
@@ -13,19 +12,19 @@
     	  <!-- <parameter name="type"	value="洽谈场所" /> -->
     <classes>
 
-        <class name="com.xbwq.TestCase.PhotoReport" />
-        <class name="com.xbwq.TestCase.OrderReport"/>
-        <class name="com.xbwq.TestCase.InventoryReport"/>
-        <class name="com.xbwq.TestCase.SalesReport"/>
-        <class name="com.xbwq.TestCase.ReturnGoodsReport"/>
-        <class name="com.xbwq.TestCase.AdventGoods"/>
-        <class name="com.xbwq.TestCase.DisplayCheck">
-          <methods>
-              <include name="deleteDisplayCheckCaoGao"/>
-              <include name="displayCheckCaoGao"/>
-              <include name="addDisplayCheck"/>
-          </methods>
-       </class>
+        <!--<class name="com.xbwq.TestCase.PhotoReport" />-->
+        <!--<class name="com.xbwq.TestCase.OrderReport"/>-->
+        <!--<class name="com.xbwq.TestCase.InventoryReport"/>-->
+        <!--<class name="com.xbwq.TestCase.SalesReport"/>-->
+        <!--<class name="com.xbwq.TestCase.ReturnGoodsReport"/>-->
+        <!--<class name="com.xbwq.TestCase.AdventGoods"/>-->
+        <!--<class name="com.xbwq.TestCase.DisplayCheck">-->
+          <!--<methods>-->
+              <!--<include name="deleteDisplayCheckCaoGao"/>-->
+              <!--<include name="displayCheckCaoGao"/>-->
+              <!--<include name="addDisplayCheck"/>-->
+          <!--</methods>-->
+       <!--</class>-->
         <class name="com.xbwq.TestCase.CompetingGoodsReport">
           <methods>
               <include name="deleteCompetingGoodsReportCaoGao"/>

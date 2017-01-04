@@ -4,6 +4,7 @@ import java.net.MalformedURLException;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.log4j.Logger;
+import org.openqa.selenium.By;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -19,7 +20,7 @@ public class CompetingGoodsReport extends BaseTest{
 	Logger log = MyLogger.log;
 	
 	@BeforeClass
-	public void beforeClass() throws MalformedURLException{
+	public void beforeClass() throws Exception {
 		driver = Driver.getDriver();
 		page = new CompetingGoodsReportPage(driver);
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
@@ -43,6 +44,7 @@ public class CompetingGoodsReport extends BaseTest{
 		page.swipeToLeft(500);
 		page.clickModule("竞品上报");
 		page.addCompetingGoods();
+        driver.findElement(By.name("hehe")).click();
 		page.saveAsCaogao();
 		page.clickFirstData();
 		page.deleteCaoGao();
@@ -53,6 +55,7 @@ public class CompetingGoodsReport extends BaseTest{
 	@Test
 	public void addCompetingGoodsReport(){
 		log.info("testcase:新增竞品上报");
+        page.swipeToLeft(500);
 		page.clickModule("竞品上报");
 		page.addCompetingGoods();
 		page.setCustomer();

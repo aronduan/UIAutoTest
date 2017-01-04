@@ -22,7 +22,7 @@ public class OrderReport extends BaseTest{
 	
 	
 	@BeforeClass
-	public void beforeClass() throws MalformedURLException{
+	public void beforeClass() throws Exception {
 		driver = Driver.getDriver();
 		page = new OrderReportPage(driver);
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);

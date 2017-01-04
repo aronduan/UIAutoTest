@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map>
+    <page name="拍照上传页面">
+        <locator type="name" timeOut="3" address="添加拍照">添加拍照按钮</locator>
+        <locator type="id"   timeOut="3" address="com.xbcx.waiqing:id/ivPic">拍摄照片</locator>
+        <locator type="name" timeOut="3" address="类型">类型</locator>
+        <locator type="name" timeOut="3" address="说明">说明输入框</locator>
+    </page>
+
+    <page name="大日期商品页面">
+        <locator type="name" timeOut="3" address="添加临期">添加临期按钮</locator>
+        <locator type="name" timeOut="3" address="生产日期">生产日期</locator>
+        <locator type="name" timeOut="3" address="备注">备注输入框</locator>
+    </page>
+
+    <page name="竞品上报页面">
+        <locator type="name" timeOut="3" address="添加竞品">添加竞品按钮</locator>
+        <locator type="name" timeOut="3" address="竞品品牌">竞品品牌输入框</locator>
+        <locator type="name" timeOut="3" address="备注">备注输入框</locator>
+        <locator type="id"   timeOut="3" address="com.xbcx.waiqing:id/ivPic">添加照片</locator>
+    </page>
+
+    <page name="陈列检查页面">
+        <locator type="name" timeOut="3" address="添加陈列">添加陈列按钮</locator>
+        <locator type="name" timeOut="3" address="陈列费用">陈列费用输入框</locator>
+        <locator type="name" timeOut="3" address="陈列面积">陈列面积输入框</locator>
+        <locator type="name" timeOut="3" address="备注">备注输入框</locator>
+        <locator type="id"   timeOut="3" address="com.xbcx.waiqing:id/ivPic">普通拍照</locator>
+    </page>
+
+    <page name="库存上报页面">
+        <locator type="name" timeOut="3" address="添加库存">添加库存按钮</locator>
+        <locator type="name" timeOut="3" address="备注">备注输入框</locator>
+    </page>
+
+    <page name="订单上报页面">
+        <locator type="name" timeOut="3" address="添加订单">添加订单按钮</locator>
+        <locator type="id"   timeOut="3" address="com.xbcx.waiqing:id/tvRight">从进货记录下单按钮</locator>
+        <locator type="name" timeOut="3" address="绑品">绑品输入框</locator>
+        <locator type="name" timeOut="3" address="订单备注">订单备注输入框</locator>
+        <locator type="name" timeOut="3" address="删除商品">删除商品按钮</locator>
+    </page>
+
+    <page name="退货上报页面">
+        <locator type="name" timeOut="3" address="添加退货">添加退货按钮</locator>
+        <locator type="name" timeOut="3" address="退货原因">退货原因输入框</locator>
+        <locator type="name" timeOut="3" address="备注">备注输入框</locator>
+    </page>
+
+    <page name="销量上报页面">
+        <locator type="name" timeOut="3" address="添加销量">添加销量按钮</locator>
+        <locator type="name" timeOut="3" address="备注">备注输入框</locator>
+    </page>
+</map>

@@ -21,7 +21,7 @@ public class Login extends BaseTest{
 	Logger log = MyLogger.log;
 	
 	@BeforeClass
-	public void beforeClass() throws MalformedURLException{
+	public void beforeClass() throws Exception {
 		driver = Driver.getDriver();
 		page = new LoginPage(driver);
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);

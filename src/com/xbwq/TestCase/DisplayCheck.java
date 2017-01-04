@@ -18,7 +18,7 @@ public class DisplayCheck extends BaseTest{
 	Logger log = MyLogger.log;
 	
 	@BeforeClass
-	public void beforeClass() throws MalformedURLException{
+	public void beforeClass() throws Exception {
 		driver = Driver.getDriver();
 		page = new DisplayCheckPage(driver);
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);

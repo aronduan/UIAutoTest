@@ -17,40 +17,40 @@ public class DisplayCheckPage extends BasePage{
 	
 	private AndroidDriver driver;
 	private Logger log = MyLogger.log;
+//
+//
+//	@FindBy(name="添加陈列") WebElement addDisplay;
+//	@FindBy(name="陈列费用") WebElement displayCost;
+//	@FindBy(name="陈列面积") WebElement displayArea;
+//	@FindBy(name="备注") WebElement note;
+//	@FindBy(id="com.xbcx.waiqing:id/ivPic") WebElement photoButton;
 	
 	
-	@FindBy(name="添加陈列") WebElement addDisplay;
-	@FindBy(name="陈列费用") WebElement displayCost;
-	@FindBy(name="陈列面积") WebElement displayArea;
-	@FindBy(name="备注") WebElement note;
-	@FindBy(id="com.xbcx.waiqing:id/ivPic") WebElement photoButton;
-	
-	
-	public DisplayCheckPage(AndroidDriver driver) {
-		super(driver);
+	public DisplayCheckPage(AndroidDriver driver) throws Exception {
+		super(driver,"陈列检查页面");
 		this.driver = driver;
-		PageFactory.initElements(driver, this);
+//		PageFactory.initElements(driver, this);
 	}
 	
 	public void addDisplay(){
-		click(addDisplay, "点击添加陈列按钮");
+		click("添加陈列按钮");
 	}
 	
 	public void setDisplayCost(String cost){
-		sendKeys(displayCost, "填写陈列费用", cost);
+		sendKeys("陈列费用输入框", cost);
 	}
 	
 	public void setDisplayArea(String area){
-		sendKeys(displayArea, "填写陈列面积", area);
+		sendKeys("陈列面积输入框", area);
 	}
 	
 	public void setNote(String strNote){
-		sendKeys(note, "填写备注", strNote);
+		sendKeys("备注输入框", strNote);
 	}
 	
 	public void setPhoto(){
 		log.info("拍一张普通照片");
-		photoButton.click();
+		click("普通拍照");
 		takeCMPhoto();
 		
 		

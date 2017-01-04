@@ -19,8 +19,8 @@ public class LoginPage extends BasePage{
 	@FindBy(id="com.xbcx.waiqing:id/etPwd") WebElement password;
 	@FindBy(name="µÇÂ¼") WebElement loginButton;
 	
-	public LoginPage(AndroidDriver driver) {
-		super(driver);
+	public LoginPage(AndroidDriver driver) throws Exception {
+		super(driver,"");
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
